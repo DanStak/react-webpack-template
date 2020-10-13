@@ -6,7 +6,7 @@ const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
 module.exports = {
   entry: [path.join(__dirname, 'src/index')],
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
   resolve: {
@@ -18,7 +18,6 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     port: 3000,
-    host: 'localhost',
     disableHostCheck: true,
   },
   module: {
