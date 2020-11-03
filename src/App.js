@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import image from './checkout.jpg';
 
 
 class App extends Component {
@@ -7,7 +6,6 @@ class App extends Component {
     return (
       <div>
         React template
-        <img src={image}/>
       </div>
     );
   }

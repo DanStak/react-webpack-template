@@ -10,9 +10,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        exclude: /node_module/,
-        use: 'babel-loader'
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: [
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              ["@babel/plugin-proposal-class-properties", { "loose" : true }]
+            ]
+          }
+        }
       },
       {
         test: /\.(png|jpg|svg|gif)?$/,
